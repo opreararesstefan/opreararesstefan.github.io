@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Oprea WebPage</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<p>Webpage</p>
+		</div>
+	</div>
+	<!-- end #header --> 
+
+	<!-- start menu-->
+	<div id="menu">
+		<ul>
+			<li><a href="http://www.opreaweb.com">Home</a></li>
+			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
+			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
+			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	
+	<!-- start content-->
+
+<!-- start content-->
+	<div id="page">
+		<div id="content">
+			<div id="banner"><img src="images/img07.jpg" alt="" /></div>
+			<div class="post">
+				<h2 class="title"> Portfolio</h2>
+				<p class="meta"> </p>
+				<div class="entry">
+				
+				<h4>Mumbling</h4><hr>
+					
+			<p>/*This time no story, no theory. The examples below show you how to write function accum:</p>
+<p>Examples:</p>
+<p>Accumul::accum("abcd"); // "A-Bb-Ccc-Dddd"<br />Accumul::accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"<br />Accumul::accum("cwAt"); // "C-Ww-Aaa-Tttt"<br />The parameter of accum is a string which includes only letters from a..z and A..Z.<br />FUNDAMENTALS<br />*/</p>
+<p><br />#include &lt;string&gt;</p>
+<p>class Accumul<br />{</p>
+<p>public:<br /> static std::string accum(const std::string &amp;s);<br />};</p>
+<p>&nbsp;</p>
+<p>std::string Accumul::accum(const std::string &amp;s){<br />int j=0;<br />std::string a = "";<br />for(std::string::const_iterator i = s.begin(); i!= s.end(); i++,j++ ) {<br /> <br /> a.push_back(toupper(*i));<br /> int w =j;<br /> while((w--)!=0) { <br /> <br /> (isupper(*i)) ? (a.push_back(tolower(*i))): (a.push_back(*i));<br /> }<br /> a.push_back('-');<br />}<br />a.erase(a.end() -1);<br />return a;<br />}</p>
+					
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content --> 
+		<!-- end #content --> 
+		
+<div id="sidebar">
+			<ul>
+				<li>
+					<h2>What can you found?</h2>
+					<p> A little things about who I am, and a little code.</p>
+				</li>
+				<li>
+					<h2>Categories </h2>
+					<ul>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Java</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">C++</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Qt</a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Gui.jar" target="_blank">Download GUI </a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Lebenslauf.pdf" target="_blank">Download Lebenslauf</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What I like to do:</h2>
+		<p>Well, guess what?  <a href="http://www.opreaweb.com/About.php">Read more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="email to opreararesstefan@gmail.com">opreararesstefan@gmail.com</a></li>
+			<li><a href="http://templated.co"> from TEMPLATED</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> &copy; Untitled. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

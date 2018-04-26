@@ -1,0 +1,114 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Oprea WebPage</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<p>Webpage</p>
+		</div>
+	</div>
+	<!-- end #header --> 
+
+	<!-- start menu-->
+	<div id="menu">
+		<ul>
+			<li><a href="http://www.opreaweb.com">Home</a></li>
+			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
+			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
+			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	
+	<!-- start content-->
+
+<!-- start content-->
+	<div id="page">
+		<div id="content">
+			<div id="banner"><img src="images/img07.jpg" alt="" /></div>
+			<div class="post">
+				<h2 class="title"> Portfolio</h2>
+				<p class="meta"> </p>
+				<div class="entry">
+				
+				<h4>Equal_Sides_Of_An_Array</h4><hr>
+					
+			<p>/*You are going to be given an array of integers. Your job is to take that array and find an index N where the sum <br />of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that <br />would make this happen, return -1.</p>
+<p>For example:</p>
+<p>Let's say you are given the array {1,2,3,4,3,2,1}:<br />Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index <br />({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.</p>
+<p>Let's look at another one.<br />You are given the array {1,100,50,-51,1,1}:<br />Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index <br />({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1.</p>
+<p>Last one:<br />You are given the array {20,10,-80,10,10,15,35}<br />At index 0 the left side is {}<br />The right side is {10,-80,10,10,15,35}<br />They both are equal to 0 when added. (Empty arrays are equal to 0 in this problem)<br />Index 0 is the place where the left side and right side are equal.<br />Note: Please remember that in most programming/scripting languages the index of an array starts at 0.<br />Input:<br />An integer array of length 0 &lt; arr &lt; 1000. The numbers in the array can be any integer positive or negative.<br />Output:<br />The lowest index N where the side to the left of N is equal to the side to the right of N. If you do not find an <br />index that fits these rules, then you will return -1.</p>
+<p>Note:<br />If you are given an array with multiple answers, return the lowest correct index.<br />An empty array should be treated like a 0 in this problem.<br />*/</p>
+<p><br />#include &lt;vector&gt;<br />using namespace std;</p>
+<p>int find_even_index (const vector &lt;int&gt; numbers) {</p>
+<p>int ls=0, rs=0, x=0, tmp=0;<br />for(vector&lt;int&gt;::const_iterator j = numbers.begin(); j&lt;= numbers.end(); j++,x++)<br />{<br /> ls+=tmp;<br /> tmp = *j;<br /> rs =0;<br /> <br /> if(j == numbers.end()) rs =0;<br /> else<br /> for( vector&lt;int&gt;::const_iterator w=numbers.end()-1; w&gt;j;w--)<br /> {<br /> rs+=*w;<br /> }<br /> if(ls==rs) return x;<br />}<br /> return -1;</p>
+<p>}</p>
+					
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content --> 
+		<!-- end #content --> 
+		
+<div id="sidebar">
+			<ul>
+				<li>
+					<h2>What can you found?</h2>
+					<p> A little things about who I am, and a little code.</p>
+				</li>
+				<li>
+					<h2>Categories </h2>
+					<ul>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Java</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">C++</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Qt</a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Gui.jar" target="_blank">Download GUI </a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Lebenslauf.pdf" target="_blank">Download Lebenslauf</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What I like to do:</h2>
+		<p>Well, guess what?  <a href="http://www.opreaweb.com/About.php">Read more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="email to opreararesstefan@gmail.com">opreararesstefan@gmail.com</a></li>
+			<li><a href="http://templated.co"> from TEMPLATED</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> &copy; Untitled. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
