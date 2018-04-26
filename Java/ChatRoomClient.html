@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Oprea WebPage</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<p>Webpage</p>
+		</div>
+	</div>
+	<!-- end #header --> 
+
+	<!-- start menu-->
+	<div id="menu">
+		<ul>
+			<li><a href="http://www.opreaweb.com">Home</a></li>
+			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
+			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
+			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	
+	
+<!-- start content-->
+	<div id="page">
+		<div id="content">
+			<div id="banner"><img src="images/img07.jpg" alt="" /></div>
+			<div class="post">
+				<h2 class="title"> Portfolio</h2>
+				<p class="meta"> </p>
+				<div class="entry">
+				
+				<h4>ChatRoomClient</h4><hr>
+					
+					<p>import java.io.*;<br />import java.net.*;<br />import java.awt.*;<br />import java.awt.event.*;<br />import javax.swing.*;</p>
+<p>public class Client extends JFrame{<br /> <br /> private JTextField userText;<br /> private JTextArea chatWindow;<br /> private ObjectOutputStream output;<br /> private ObjectInputStream input;<br /> private String message;<br /> private String serverIP;<br /> private Socket connection;<br /> <br /> //constructor<br /> public Client(String host) {<br /> super("BestMessenger");<br /> serverIP = host;<br /> userText = new JTextField();<br /> userText.setEditable(false);<br /> userText.addActionListener(<br /> new ActionListener() {<br /> public void actionPerformed(ActionEvent event) {<br /> sendMessage(event.getActionCommand());<br /> userText.setText("");<br /> }<br /> }<br /> );<br /> add(userText, BorderLayout.NORTH);<br /> chatWindow = new JTextArea();<br /> add(new JScrollPane(chatWindow), BorderLayout.CENTER);<br /> setSize(640, 480);<br /> setVisible(true);<br /> }<br /> <br /> //connect to server<br /> public void startRunning() {<br /> try {<br /> connectToServer();<br /> setupStreams();<br /> whileChatting();<br /> <br /> }catch(EOFException eofException) {<br /> showMessage("\n Client terminated the connection");<br /> }catch(IOException ioException) {<br /> ioException.printStackTrace();<br /> }finally {<br /> closeCrap();<br /> }<br /> }<br /> //connect to server<br /> private void connectToServer() throws IOException{<br /> showMessage("Attempting connection...\n");<br /> connection = new Socket(InetAddress.getByName(serverIP), 6789);<br /> showMessage("Connected to: "+connection.getInetAddress().getHostName());<br /> }<br /> <br /> //set up streams to send and receive messages<br /> private void setupStreams() throws IOException{<br /> output = new ObjectOutputStream(connection.getOutputStream());<br /> output.flush();<br /> input = new ObjectInputStream(connection.getInputStream());<br /> showMessage("\n Streams are now good to go\n");<br /> }<br /> <br /> //whileChatting method with server<br /> private void whileChatting() throws IOException{<br /> ableToType(true);<br /> do {<br /> try { <br /> message = (String) input.readObject();<br /> showMessage("\n" + message);<br /> }catch(ClassNotFoundException classNotFoundException) {<br /> showMessage("I don't know that object type");<br /> }<br /> }while(!message.equals("SERVER - END"));<br /> }<br /> <br /> //close the streams and sockets<br /> private void closeCrap() {<br /> showMessage("\n Closing crap down...\n");<br /> ableToType(false);<br /> try {<br /> output.close();<br /> input.close();<br /> connection.close();<br /> }catch(IOException ioException) {<br /> ioException.printStackTrace();<br /> }<br /> }<br /> <br /> //send message to server<br /> private void sendMessage(String message) {<br /> try {<br /> output.writeObject("CLIENT - " + message);<br /> output.flush();<br /> showMessage("\n CLIENT - "+ message);<br /> }catch(IOException ioException) {<br /> chatWindow.append("\n something messed up sending message \n");<br /> }<br /> }</p>
+<p>//change/ update chatWindow<br /> private void showMessage(final String m) {<br /> SwingUtilities.invokeLater(<br /> new Runnable() {<br /> public void run() {<br /> chatWindow.append(m);<br /> }<br /> }<br /> );<br /> }</p>
+<p>// gives user permission tot type into the textbox<br /> private void ableToType(final boolean tof) {<br /> SwingUtilities.invokeLater(<br /> new Runnable() {<br /> public void run() {<br /> userText.setEditable(tof);<br /> }<br /> } <br /> );<br /> }<br />}</p>
+<p>&nbsp;</p>
+<p>import javax.swing.JFrame;</p>
+<p>public class apple {</p>
+<p>public static void main(String[] args) {<br /> <br /> Client cl;<br /> cl = new Client("127.0.0.1");<br /> cl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br /> cl.startRunning();<br /> }</p>
+<p>}</p>
+					
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content --> 
+
+		
+<div id="sidebar">
+			<ul>
+				<li>
+					<h2>What can you found?</h2>
+					<p> A little things about who I am, and a little code.</p>
+				</li>
+				<li>
+					<h2>Categories </h2>
+					<ul>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Java</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">C++</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Qt</a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Gui.jar" target="_blank">Download GUI </a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Lebenslauf.pdf" target="_blank">Download Lebenslauf</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What I like to do:</h2>
+		<p>Well, guess what?  <a href="http://www.opreaweb.com/About.php">Read more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="email to opreararesstefan@gmail.com">opreararesstefan@gmail.com</a></li>
+			<li><a href="http://templated.co"> from TEMPLATED</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> &copy; Untitled. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

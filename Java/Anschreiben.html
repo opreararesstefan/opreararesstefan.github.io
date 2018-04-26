@@ -1,0 +1,175 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Oprea WebPage</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<p>Webpage</p>
+		</div>
+	</div>
+	<!-- end #header --> 
+
+	<!-- start menu-->
+	<div id="menu">
+		<ul>
+			<li><a href="http://www.opreaweb.com">Home</a></li>
+			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
+			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
+			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	
+	<!-- start content-->
+	<div id="page">
+		<div id="content">
+			<div id="banner"><img src="images/img07.jpg" alt="" /></div>
+			<div class="post">
+				<h2 class="title"> Portfolio</h2>
+				<p class="meta"> </p>
+				<div class="entry">
+				
+				<h4>Anschreiben</h4><hr>
+					
+					<p>import javax.swing.JFrame;</p>
+<p>public class Apple {<br /> <br /> <br /> public static void main(String[] args) { <br /><br />&nbsp; &nbsp;PdfButton smile = new PdfButton();<br />&nbsp; &nbsp;smile.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br />&nbsp; &nbsp;smile.setSize(800, 600);<br />&nbsp; &nbsp;smile.setVisible(true);<br /> }<br />}</p>
+<p>&nbsp;</p>
+<p>import javax.swing.JFrame;</p>
+<p>public class Apple {<br /> <br /> <br /> public static void main(String[] args) { <br /><br />&nbsp; &nbsp;PdfButton smile = new PdfButton();<br />&nbsp; &nbsp;smile.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br />&nbsp; &nbsp;smile.setSize(800, 600);<br />&nbsp; &nbsp;smile.setVisible(true);<br />&nbsp; &nbsp;}<br />}</p>
+<p>&nbsp;</p>
+<p>import java.awt.event.*;<br />import java.awt.*;<br />import java.io.*;<br />import javax.swing.*;</p>
+<p>public class PdfButton extends JFrame{<br /> <br /> //declare butons<br /> private JButton cv;<br /> private JButton zw;<br /> private JButton du;<br /> private JButton dub;<br /> private JButton sn;<br /> <br /> private JMenuBar menubar;<br /> <br /> private String aboutt = "Powered By Oprea Rares \n 16-April-2018 \n CodeSource can be found: ";<br /> private String url = "https://github.com/opreararesstefan/opreararesstefan.github.io \n";<br /> private String email = "opreararesstefan@gmail.com\n";<br /> private String cvpath = "Lebenslauf.pdf";<br /> private String zwpath = "Zwischenzeugnis.pdf";<br /> private String dupath = "Diplom_ubersetz.pdf";<br /> private String dubpath = "Diplom_ubersetz1.pdf";<br /> <br />//constructor<br /> public PdfButton() {<br /> super("BestEditorEver");<br /> setLayout(new FlowLayout());<br /> <br /> //define buttons<br /> cv= new JButton("Lebenslauf");<br /> zw= new JButton("Zwischenzeugnis");<br /> du = new JButton("Diplom Ubersetz");<br /> dub = new JButton("Diplom ubersetz");<br /> menubar = new JMenuBar();<br /> sn = new JButton("Snake Game");<br /> <br /> cv.setPreferredSize(new Dimension(150,400));<br /> zw.setPreferredSize(new Dimension(150,400));<br /> du.setPreferredSize(new Dimension(150,400));<br /> dub.setPreferredSize(new Dimension(150,400));<br /> sn.setPreferredSize(new Dimension(600, 100));<br /> <br />//add to the screen<br /> add(cv);<br /> add(zw);<br /> add(du);<br /> add(dub);<br /> add(sn, BorderLayout.SOUTH);<br /> setJMenuBar(menubar);<br /> <br /> JMenu file = new JMenu("File");<br /> menubar.add(file);<br /> JMenuItem exit = new JMenuItem("Exit");<br /> file.add(exit);<br /> <br /> JMenu help = new JMenu("Help");<br /> menubar.add(help);<br /> JMenuItem about = new JMenuItem("About");<br /> help.add(about);</p>
+<p><br />//push button actions <br /> Handler handlercv = new Handler(cvpath);<br /> cv.addActionListener(handlercv); <br /> <br /> Handler handlerzw = new Handler(zwpath);<br /> zw.addActionListener(handlerzw);</p>
+<p>Handler handlerdu = new Handler(dupath);<br /> du.addActionListener(handlerdu); <br /> <br /> Handler handlerdub = new Handler(dubpath);<br /> dub.addActionListener(handlerdub); <br /> <br /> sn.addActionListener(<br /> new ActionListener() {<br /> @Override<br /> public void actionPerformed(ActionEvent event) {<br /> EventQueue.invokeLater(() -&gt; {<br /> JFrame ex = new Board();<br /> ex.setVisible(true);<br /> });<br /> }<br /> }<br /> );<br /> <br /> exit.addActionListener(<br /> new ActionListener() {<br /> @Override<br /> public void actionPerformed(ActionEvent event) {<br /> System.exit(0);<br /> }<br /> }<br /> );<br /> about.addActionListener(<br /> new ActionListener() {<br /> @Override<br /> public void actionPerformed(ActionEvent event) {<br /> JOptionPane.showMessageDialog(null, aboutt+url+email, "About", JOptionPane.INFORMATION_MESSAGE);<br /> <br /> }<br /> }<br /> ); <br /> } //end&nbsp; &nbsp; constructor&nbsp;</p>
+<p><br /> <br /> public class Board extends JFrame {</p>
+<p>//constructor BOard<br /> public Board() {<br /> initUI();<br /> }<br /> <br /> private void initUI() {<br /> <br /> add(new Snake());<br /> setResizable(false);<br /> pack();<br /> <br /> setTitle("Snake");<br /> setLocationRelativeTo(null);<br /> setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br /> }<br /> }</p>
+<p><br /> // ActionListener method<br /> private class Handler implements ActionListener{<br /> <br /> public String filepath; <br /> //constructor<br /> public Handler(String f) {<br /> filepath = f;<br /> } <br /> <br /> public void actionPerformed(ActionEvent event) {<br /> try {<br /> if (Desktop.isDesktopSupported()) { <br /> Desktop.getDesktop().open(new File(filepath));<br /> }<br /> }catch(Exception e) {<br /> JOptionPane.showMessageDialog(null,"Something goes wrong");} <br /> }<br /> }<br /> }</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>import java.awt.Color;<br />import java.awt.Dimension;<br />import java.awt.Font;<br />import java.awt.FontMetrics;<br />import java.awt.Graphics;<br />import java.awt.Image;<br />import java.awt.Toolkit;<br />import java.awt.event.ActionEvent;<br />import java.awt.event.ActionListener;<br />import java.awt.event.KeyAdapter;<br />import java.awt.event.KeyEvent;<br />import javax.swing.ImageIcon;<br />import javax.swing.JPanel;<br />import javax.swing.Timer;</p>
+<p>public class Snake extends JPanel implements ActionListener {</p>
+<p>private final int B_WIDTH = 300;<br /> private final int B_HEIGHT = 300;<br /> private final int DOT_SIZE = 10;<br /> private final int ALL_DOTS = 900;<br /> private final int RAND_POS = 29;<br /> private final int DELAY = 140;</p>
+<p>private final int x[] = new int[ALL_DOTS];<br /> private final int y[] = new int[ALL_DOTS];</p>
+<p>private int dots;<br /> private int apple_x;<br /> private int apple_y;</p>
+<p>private boolean leftDirection = false;<br /> private boolean rightDirection = true;<br /> private boolean upDirection = false;<br /> private boolean downDirection = false;<br /> private boolean inGame = true;</p>
+<p>private Timer timer;<br /> private Image ball;<br /> private Image apple;<br /> private Image head;</p>
+<p>//constructor<br /> public Snake() {<br /> <br /> initBoard();<br /> }<br /> <br /> private void initBoard() {</p>
+<p>addKeyListener(new TAdapter());<br /> setBackground(Color.black);<br /> setFocusable(true);<br /> setDoubleBuffered(true);</p>
+<p>setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));<br /> loadImages();<br /> initGame();<br /> }</p>
+<p>private void loadImages() {</p>
+<p>ImageIcon iid = createImageIcon("/dot.png");<br /> ball = iid.getImage();</p>
+<p>ImageIcon iia = createImageIcon("/apple.png");<br /> apple = iia.getImage();</p>
+<p>ImageIcon iih = createImageIcon("/head.png");<br /> head = iih.getImage();<br /> }</p>
+<p>//<br /> protected ImageIcon createImageIcon(String path ) {<br /> java.net.URL imgURL = getClass().getResource(path);<br /> if (imgURL != null) {<br /> return new ImageIcon(imgURL );<br /> } else {<br /> System.err.println("Couldn't find file: " + path);<br /> return null;<br /> }<br /> }<br /> //<br /> private void initGame() {</p>
+<p>dots = 3;</p>
+<p>for (int z = 0; z &lt; dots; z++) {<br /> x[z] = 50 - z * 10;<br /> y[z] = 50;<br /> }<br /> <br /> locateApple();</p>
+<p>timer = new Timer(DELAY, this);<br /> timer.start();<br /> }</p>
+<p>@Override<br /> public void paintComponent(Graphics g) {<br /> super.paintComponent(g);</p>
+<p>doDrawing(g);<br /> }<br /> <br /> private void doDrawing(Graphics g) {<br /> <br /> if (inGame) {</p>
+<p>g.drawImage(apple, apple_x, apple_y, this);</p>
+<p>for (int z = 0; z &lt; dots; z++) {<br /> if (z == 0) {<br /> g.drawImage(head, x[z], y[z], this);<br /> } else {<br /> g.drawImage(ball, x[z], y[z], this);<br /> }<br /> }</p>
+<p>Toolkit.getDefaultToolkit().sync();</p>
+<p>} else {</p>
+<p>gameOver(g);<br /> }<br /> }</p>
+<p>private void gameOver(Graphics g) {<br /> <br /> String msg = "Game Over";<br /> String msg2 = "\n Don't play to much, you must work!!";<br /> Font small = new Font("Helvetica", Font.BOLD, 14);<br /> FontMetrics metr = getFontMetrics(small);</p>
+<p>g.setColor(Color.white);<br /> g.setFont(small);<br /> g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 2, B_HEIGHT / 2);<br /> g.drawString(msg2, ((B_WIDTH - metr.stringWidth(msg)) / 8), (B_HEIGHT / 2)+15);<br /> <br /> }</p>
+<p>private void checkApple() {</p>
+<p>if ((x[0] == apple_x) &amp;&amp; (y[0] == apple_y)) {</p>
+<p>dots++;<br /> locateApple();<br /> }<br /> }</p>
+<p>private void move() {</p>
+<p>for (int z = dots; z &gt; 0; z--) {<br /> x[z] = x[(z - 1)];<br /> y[z] = y[(z - 1)];<br /> }</p>
+<p>if (leftDirection) {<br /> x[0] -= DOT_SIZE;<br /> }</p>
+<p>if (rightDirection) {<br /> x[0] += DOT_SIZE;<br /> }</p>
+<p>if (upDirection) {<br /> y[0] -= DOT_SIZE;<br /> }</p>
+<p>if (downDirection) {<br /> y[0] += DOT_SIZE;<br /> }<br /> }</p>
+<p>private void checkCollision() {</p>
+<p>for (int z = dots; z &gt; 0; z--) {</p>
+<p>if ((z &gt; 4) &amp;&amp; (x[0] == x[z]) &amp;&amp; (y[0] == y[z])) {<br /> inGame = false;<br /> }<br /> }</p>
+<p>if (y[0] &gt;= B_HEIGHT) {<br /> inGame = false;<br /> }</p>
+<p>if (y[0] &lt; 0) {<br /> inGame = false;<br /> }</p>
+<p>if (x[0] &gt;= B_WIDTH) {<br /> inGame = false;<br /> }</p>
+<p>if (x[0] &lt; 0) {<br /> inGame = false;<br /> }<br /> <br /> if (!inGame) {<br /> timer.stop();<br /> }<br /> }</p>
+<p>private void locateApple() {</p>
+<p>int r = (int) (Math.random() * RAND_POS);<br /> apple_x = ((r * DOT_SIZE));</p>
+<p>r = (int) (Math.random() * RAND_POS);<br /> apple_y = ((r * DOT_SIZE));<br /> }</p>
+<p>@Override<br /> public void actionPerformed(ActionEvent e) {</p>
+<p>if (inGame) {</p>
+<p>checkApple();<br /> checkCollision();<br /> move();<br /> }</p>
+<p>repaint();<br /> }</p>
+<p>private class TAdapter extends KeyAdapter {</p>
+<p>@Override<br /> public void keyPressed(KeyEvent e) {</p>
+<p>int key = e.getKeyCode();</p>
+<p>if ((key == KeyEvent.VK_LEFT) &amp;&amp; (!rightDirection)) {<br /> leftDirection = true;<br /> upDirection = false;<br /> downDirection = false;<br /> }</p>
+<p>if ((key == KeyEvent.VK_RIGHT) &amp;&amp; (!leftDirection)) {<br /> rightDirection = true;<br /> upDirection = false;<br /> downDirection = false;<br /> }</p>
+<p>if ((key == KeyEvent.VK_UP) &amp;&amp; (!downDirection)) {<br /> upDirection = true;<br /> rightDirection = false;<br /> leftDirection = false;<br /> }</p>
+<p>if ((key == KeyEvent.VK_DOWN) &amp;&amp; (!upDirection)) {<br /> downDirection = true;<br /> rightDirection = false;<br /> leftDirection = false;<br /> }<br /> }<br /> }<br />}</p>
+<p>&nbsp;</p>
+					
+					
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->  
+		
+<div id="sidebar">
+			<ul>
+				<li>
+					<h2>What can you found?</h2>
+					<p> A little things about who I am, and a little code.</p>
+				</li>
+				<li>
+					<h2>Categories </h2>
+					<ul>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Java</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">C++</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Qt</a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Gui.jar" target="_blank">Download GUI </a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Lebenslauf.pdf" target="_blank">Download Lebenslauf</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What I like to do:</h2>
+		<p>Well, guess what?  <a href="http://www.opreaweb.com/About.php">Read more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="email to opreararesstefan@gmail.com">opreararesstefan@gmail.com</a></li>
+			<li><a href="http://templated.co"> from TEMPLATED</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> &copy; Untitled. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Oprea WebPage</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<p>Webpage</p>
+		</div>
+	</div>
+	<!-- end #header --> 
+
+	<!-- start menu-->
+	<div id="menu">
+		<ul>
+			<li><a href="http://www.opreaweb.com">Home</a></li>
+			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
+			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
+			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	
+
+<!-- start content-->
+	<div id="page">
+		<div id="content">
+			<div id="banner"><img src="images/img07.jpg" alt="" /></div>
+			<div class="post">
+				<h2 class="title"> Portfolio</h2>
+				<p class="meta"> </p>
+				<div class="entry">
+				
+				<h4>JCheckBox</h4><hr>
+					
+					<p>import java.awt.*;<br />import java.awt.event.*;<br />import javax.swing.*;</p>
+<p>public class Foi extends JFrame{<br /> private JTextField tf;<br /> private JCheckBox boldbox;<br /> private JCheckBox italicbox;<br /> <br /> public Foi() {<br /> super("title");<br /> setLayout( new FlowLayout());<br /> <br /> tf = new JTextField("This is a sentece", 20);<br /> tf.setFont( new Font("Serif", Font.PLAIN, 14));<br /> add(tf);<br /> <br /> boldbox = new JCheckBox("bold");<br /> italicbox = new JCheckBox("italic");<br /> add(boldbox);<br /> add(italicbox);<br /> <br /> Hand handler = new Hand();<br /> boldbox.addItemListener(handler);<br /> italicbox.addItemListener(handler);<br /> <br /> }<br /> <br /> private class Hand implements ItemListener {<br /> public void itemStateChanged(ItemEvent event) {<br /> Font font = null;<br /> <br /> if(boldbox.isSelected() &amp;&amp; italicbox.isSelected())<br /> font = new Font("Serif", Font.BOLD + Font.ITALIC,14);<br /> else if (boldbox.isSelected())<br /> font = new Font("das", Font.BOLD,14);<br /> else if (italicbox.isSelected())<br /> font = new Font("ital", Font.ITALIC,14);<br /> else <br /> font = new Font("for", Font.PLAIN, 14);<br /> <br /> tf.setFont(font);<br /> }<br /> }<br />}</p>
+<p>&nbsp;</p>
+<p>import javax.swing.JFrame;</p>
+<p>public class apples {</p>
+<p>public static void main(String[] args) {<br /> <br /> Foi fo = new Foi();<br /> fo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br /> fo.setSize(640, 480);<br /> fo.setVisible(true);</p>
+<p>}</p>
+<p>}</p>
+					
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content --> 
+ 
+		
+<div id="sidebar">
+			<ul>
+				<li>
+					<h2>What can you found?</h2>
+					<p> A little things about who I am, and a little code.</p>
+				</li>
+				<li>
+					<h2>Categories </h2>
+					<ul>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Java</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">C++</a></li>
+						<li><span>23.04.2018</span><a href="http://opreararesstefan.github.io">Qt</a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Gui.jar" target="_blank">Download GUI </a></li>
+						<li><span>26.04.2018</span> <a href="http://opreararesstefan.github.io/includes/Lebenslauf.pdf" target="_blank">Download Lebenslauf</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What I like to do:</h2>
+		<p>Well, guess what?  <a href="http://www.opreaweb.com/About.php">Read more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="email to opreararesstefan@gmail.com">opreararesstefan@gmail.com</a></li>
+			<li><a href="http://templated.co"> from TEMPLATED</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> &copy; Untitled. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
