@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by TEMPLATED
@@ -22,7 +21,7 @@ Released   : 20090918
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1><a href="https://opreararesstefan.github.io">Oprea</a></h1>
+			<h1><a href="http://opreararesstefan.github.io">Oprea</a></h1>
 			<p>Webpage</p>
 		</div>
 	</div>
@@ -33,7 +32,7 @@ Released   : 20090918
 		<ul>
 			<li><a href="http://www.opreaweb.com">Home</a></li>
 			<li><a href="http://www.opreaweb.com/Lebenslauf.php">Lebenslauf</a></li>
-			<li class="current_page_item"><a href="http://www.opreaweb.com/Portfolio.php">Portfolio</a></li>
+			<li class="current_page_item"><a href="http://opreararesstefan.github.io">Portfolio</a></li>
 			<li><a href="http://www.opreaweb.com/About.php">About</a></li>
 			<li><a href="http://www.opreaweb.com/Contact.php">Contact</a></li>
 		</ul>
@@ -50,10 +49,10 @@ Released   : 20090918
 				<p class="meta"> </p>
 				<div class="entry">
 				
-				<h4>Functions</h4><hr>
-					
-	<pre>classmates = {'Tony':'cool but smells', 'Emma':'sits behind me', 'Lucy':'asks too many questions'}<br />print(classmates)<br /><br />for k, v in classmates.items():<br />    print(k)<br />def beef(name= 'buck', action = 'ate', item = 'tuna'):<br />    print(name, action, item)<br /><br />def add_bitcoin(*args):<br />    total =0<br />    for a in args:<br />        total +=a<br />    print(total)<br /><br />def allowed_dating_age(my_age):<br />    girls_age = my_age/2+7<br />    return girls_age<br /><br />def get_gender( sex = 'Unknown'):<br />    if sex is 'm':<br />        sex = "male"<br />    elif sex is 'f':<br />        sex = "female"<br />    print(sex)<br /><br />def health_calculator(age, apples_ate, cigs_smoked):<br />    answer = (100-age)+(apples_ate*3.5)-(cigs_smoked*2)<br />    print(answer)<br />data = [28, 20, 0]<br /><br /><br /><br />beef()<br />beef("Sally", "farts", "gently")<br />beef(item = 'awesome', action= 'is')<br />add_bitcoin(3, 85)<br />print(allowed_dating_age(28))<br />get_gender('m')<br />get_gender('f')<br />health_calculator(data[0], data[1], data[2])<br />health_calculator(*data)</pre>
-					
+				<h4>Spider</h4><hr>
+
+				<pre>import requests<br />from bs4 import BeautifulSoup<br /><br />while True:<br />    try:<br />        def trade_spider(max_pages):<br />            page = 1<br />            while page &lt;= max_pages<br />                url = 'https://forum.softpedia.com/forum/270-incepatori/page__st__200'+str(page)<br />                source_code = requests.get(url)<br />                plain_text = source_code.text<br />                soup = BeautifulSoup(plain_text)<br />                for link is soup.findAll('a', {'class': 'itemprop=name'}):<br />                    href = "https://forum.softpedia.com" + link.get('href')<br />                    title = link.string<br />                    #print(href)<br />                    #print(title)<br />                    get_single_item_data(href)<br />                page += 1<br /><br />        def get_single_item_data(item_url):<br />            source_code = requests.get(item_url)<br />            plain_text = source_code.text<br />            soup = BeautifulSoup(plain_text)<br />            for item_name in soup.findAll('div', {'clas': 'i-name'}):<br />                print(item_name.string)<br />            for link in soup.findAll('a'):<br />                href = "https://forum.softpedia.com" + link.get('href')<br />                print(href)<br />        break<br />    except ValueError:<br />        print("Something goes wrong")<br />    finally:<br />        print("loop completed")<br /><br />trade_spider(3)</pre>
+				
 				</div>
 			</div>
 			<div style="clear: both;">&nbsp;</div>
